@@ -44,6 +44,7 @@ The Menu Driven Design can be seen below with a "Log in and book table" flow sho
 ![images/img5.png](images/img5.png)
 ![images/img6.png](images/img6.png)
 
+
 Further screenshots on Admin managing bookings:
 ![images/img7.png](images/img7.png)
 ![images/img8.png](images/img8.png)
