@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.BookATableController">
+   <center>
+      <StackPane BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="361.0" prefWidth="603.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f5f5" height="303.0" layoutX="48.0" layoutY="2.0" stroke="WHITESMOKE" strokeType="INSIDE" width="504.0" />
+                  <Label fx:id="date_selection_warning" layoutX="213.0" layoutY="90.0" textFill="RED" />
+                  <Button fx:id="select_desk_button" layoutX="400.0" layoutY="65.0" mnemonicParsing="false" onAction="#selectDeskButton" text="Select Desk" />
+                  <Button fx:id="back_to_main" layoutX="27.0" layoutY="310.0" mnemonicParsing="false" onAction="#backToMain" text="Back to Main Menu" />
+                  <Label fx:id="please_select_date" layoutX="213.0" layoutY="96.0" textFill="#e80000" />
+                  <Group layoutX="213.0" layoutY="49.0">
+                     <children>
+                        <DatePicker fx:id="date_selected" layoutY="17.0" onAction="#selectingDate" />
+                        <Text layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a date:" />
+                     </children>
+                  </Group>
+               </children>
+            </Pane>
+            <Pane prefHeight="357.0" prefWidth="598.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="276.0" layoutX="101.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="399.0" />
+                  <Rectangle fx:id="desk_0" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="117.0" layoutY="28.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                  <Rectangle fx:id="desk_1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="224.0" layoutY="28.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                  <Rectangle fx:id="desk_2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="325.0" layoutY="28.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                  <Rectangle fx:id="desk_3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="433.0" layoutY="28.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                  <Rectangle fx:id="desk_9" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="224.0" layoutY="243.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                  <Rectangle fx:id="desk_10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="325.0" layoutY="243.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                  <Rectangle fx:id="desk_11" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="433.0" layoutY="243.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                  <Rectangle fx:id="desk_4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="117.0" layoutY="127.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                  <Rectangle fx:id="desk_8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="117.0" layoutY="223.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                  <Rectangle fx:id="desk_7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="453.0" layoutY="127.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                  <Rectangle fx:id="desk_5" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="224.0" layoutY="137.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                  <Rectangle fx:id="desk_6" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="325.0" layoutY="137.0" onMouseClicked="#tableSelected" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                  <Label fx:id="warning_text" layoutX="361.0" layoutY="290.0" textFill="#b50000">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="back_to_select_date" layoutX="29.0" layoutY="311.0" mnemonicParsing="false" onAction="#backToSelectDate" text="Back to Select Date" />
+                  <Label fx:id="desk_selection_warning" layoutX="101.0" layoutY="290.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="280.0" prefWidth="527.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffda" height="180.0" layoutX="151.0" layoutY="89.0" stroke="BLACK" strokeDashOffset="20.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="20.0" strokeType="INSIDE" width="298.0" />
+                  <Text layoutX="167.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Booking Details:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="confirm_table_number_label" layoutX="167.0" layoutY="149.0" text="Table Number: " />
+                  <Label fx:id="confirm_date_label" layoutX="167.0" layoutY="179.0" text="Date:" />
+                  <Button fx:id="confirm_cancel_button" layoutX="390.0" layoutY="236.0" mnemonicParsing="false" onAction="#bookingConfirmResponse" text="Cancel" />
+                  <Button fx:id="confirm_yes_button" layoutX="334.0" layoutY="236.0" mnemonicParsing="false" onAction="#bookingConfirmResponse" prefHeight="25.0" prefWidth="48.0" text="Yes" />
+               </children>
+               <padding>
+                  <Insets left="150.0" right="150.0" />
+               </padding>
+            </Pane>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <Pane prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="266.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book a Table" />
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

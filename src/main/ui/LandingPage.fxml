@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.LandingPageController">
+   <center>
+      <StackPane>
+         <children>
+            <Pane prefHeight="306.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="log_in_button" layoutX="176.0" layoutY="75.0" mnemonicParsing="false" onAction="#selectLogin" prefHeight="72.0" prefWidth="248.0" text="Log In">
+                     <font>
+                        <Font size="34.0" />
+                     </font></Button>
+                  <Button fx:id="register_button" layoutX="176.0" layoutY="160.0" mnemonicParsing="false" onAction="#register" prefHeight="72.0" prefWidth="248.0" text="Register">
+                     <font>
+                        <Font size="29.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label fx:id="is_Connected" layoutX="14.0" layoutY="264.0" text="Status" />
+                  <TextField fx:id="txt_Username" layoutX="226.0" layoutY="51.0" promptText="Enter username" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.4921875" AnchorPane.topAnchor="51.0" />
+                  <PasswordField fx:id="txt_Password" layoutX="226.0" layoutY="88.0" promptText="Enter password" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.4921875" AnchorPane.topAnchor="88.0" />
+                  <Button defaultButton="true" layoutX="257.0" layoutY="125.0" mnemonicParsing="false" onAction="#Login" prefHeight="29.0" prefWidth="80.0" text="Login" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="152.0" AnchorPane.leftAnchor="257.0" AnchorPane.rightAnchor="263.0" AnchorPane.topAnchor="125.0">
+                     <font>
+                        <Font name="System Font" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="back_to_landing_button" layoutX="139.0" layoutY="221.0" mnemonicParsing="false" onAction="#backToLanding" text="Back" />
+                  <Button fx:id="forgot_password_button" defaultButton="true" layoutX="238.0" layoutY="166.0" mnemonicParsing="false" onAction="#forgotPassword" prefHeight="10.0" prefWidth="124.0" text="Forgot Password" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Font" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <TextField fx:id="emp_id_in" layoutX="226.0" layoutY="37.0" />
+                  <TextField fx:id="first_name_in" layoutX="226.0" layoutY="78.0" />
+                  <TextField fx:id="last_name_in" layoutX="226.0" layoutY="119.0" />
+                  <TextField fx:id="username_in" layoutX="226.0" layoutY="161.0" />
+                  <TextField fx:id="role_in" layoutX="226.0" layoutY="202.0" />
+                  <Text layoutX="226.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eployee ID" />
+                  <Text layoutX="226.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
+                  <Text layoutX="226.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+                  <Text layoutX="226.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <Text layoutX="226.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" />
+                  <Button fx:id="register_next_step_button" layoutX="514.0" layoutY="243.0" mnemonicParsing="false" onAction="#toRegister2" text="Next" />
+                  <Button layoutX="50.0" layoutY="243.0" mnemonicParsing="false" onAction="#backToLanding" text="Back" />
+                  <Label fx:id="fields_warning1" layoutX="302.0" layoutY="247.0" prefHeight="17.0" prefWidth="206.0" textAlignment="RIGHT" textFill="RED" />
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text layoutX="165.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                  <Text layoutX="165.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secret Recovery Question" />
+                  <Text layoutX="165.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secret Question Answer" />
+                  <Button fx:id="finish_registering_button" layoutX="514.0" layoutY="243.0" mnemonicParsing="false" onAction="#finishRegistering" text="Finish" />
+                  <PasswordField fx:id="password_in" layoutX="161.0" layoutY="37.0" prefHeight="25.0" prefWidth="278.0" />
+                  <ChoiceBox fx:id="secret_qn_choice" layoutX="161.0" layoutY="79.0" prefHeight="25.0" prefWidth="278.0" />
+                  <TextField fx:id="secret_ans_in" layoutX="161.0" layoutY="120.0" prefHeight="25.0" prefWidth="278.0" />
+                  <Button fx:id="back_to_register1_button" layoutX="50.0" layoutY="243.0" mnemonicParsing="false" onAction="#backToRegister1" text="Back" />
+                  <Label fx:id="fields_warning2" layoutX="315.0" layoutY="247.0" prefHeight="17.0" prefWidth="194.0" textFill="RED" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffda" height="180.0" layoutX="151.0" layoutY="14.0" stroke="BLACK" strokeDashOffset="20.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="20.0" strokeType="INSIDE" width="298.0" />
+                  <Text fill="RED" layoutX="215.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WARNING!">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="register_warning_label" layoutX="170.0" layoutY="96.0" />
+                  <Button fx:id="warning_okay_button" layoutX="398.0" layoutY="161.0" mnemonicParsing="false" onAction="#warningPressOkay" text="Okay" />
+                  <Text layoutX="252.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration failed" />
+               </children>
+               <padding>
+                  <Insets left="150.0" right="150.0" />
+               </padding>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text layoutX="169.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter in your employee ID:" />
+                  <TextField fx:id="recover_emp_id_check" layoutX="169.0" layoutY="59.0" prefHeight="25.0" prefWidth="199.0" />
+                  <Text layoutX="169.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your secret question is:" />
+                  <Label fx:id="recover_secret_qn_label" layoutX="169.0" layoutY="101.0" textFill="#0043ff" />
+                  <Text layoutX="169.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your secret answer:" />
+                  <TextField fx:id="secret_ans_check" disable="true" layoutX="169.0" layoutY="142.0" prefHeight="25.0" prefWidth="200.0" />
+                  <Button fx:id="recover_emp_id_confirm_button" layoutX="373.0" layoutY="59.0" mnemonicParsing="false" onAction="#confirmEmpId" text="Confirm" />
+                  <Button fx:id="secret_ans_check_button" disable="true" layoutX="374.0" layoutY="142.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="25.0" prefWidth="56.0" text="Check" />
+                  <Text fx:id="new_pass_text" layoutX="169.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your new password is:" visible="false" />
+                  <Label fx:id="new_pass_label" layoutX="272.0" layoutY="216.0" />
+                  <Button layoutX="48.0" layoutY="233.0" mnemonicParsing="false" onAction="#backToLanding" text="Back" />
+                  <Label fx:id="check_emp_id_warning_label" layoutX="440.0" layoutY="63.0" textFill="RED" />
+                  <Label fx:id="incorrect_ans_label" layoutX="169.0" layoutY="173.0" textFill="RED" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <Pane prefHeight="105.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="130.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simple Desk" textAlignment="CENTER" wrappingWidth="355.88671875">
+               <font>
+                  <Font name="Arial Bold" size="57.0" />
+               </font>
+            </Text>
+            <Text fill="#616161" layoutX="249.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="101.576171875">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

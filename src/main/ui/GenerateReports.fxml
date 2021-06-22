@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.GenerateReportsController">
+   <top>
+      <Pane prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="254.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate Reports" textAlignment="CENTER" />
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <StackPane BorderPane.alignment="CENTER">
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button layoutX="32.0" layoutY="304.0" mnemonicParsing="false" onAction="#backToMainMenu" text="Back" />
+            <DatePicker fx:id="report_date_picker" layoutX="66.0" layoutY="109.0" />
+            <Text layoutX="66.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate Booking Report">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="66.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose A Date:" />
+            <Button fx:id="desk_lockdown_floorplan_button" layoutX="66.0" layoutY="142.0" mnemonicParsing="false" onAction="#generateBookingReport" text="Generate" />
+            <Line endX="-100.0" endY="252.0" layoutX="400.0" layoutY="64.0" startX="-100.0" startY="-55.0" />
+            <Text layoutX="313.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate Employee Info Report">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="313.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Employee ID:" />
+            <Button fx:id="engage_level_button" layoutX="313.0" layoutY="142.0" mnemonicParsing="false" onAction="#generateEmployeeReport" text="Generate" />
+               <TextField fx:id="report_emp_id_in" layoutX="313.0" layoutY="109.0" />
+               <Label fx:id="date_warning_label" layoutX="66.0" layoutY="172.0" textFill="RED" />
+               <Label fx:id="id_warning_label" layoutX="313.0" layoutY="172.0" textFill="RED" />
+               <Text fill="#434343" layoutX="179.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All reports are saved to the 'Reports' directory" />
+         </children></Pane>
+      </StackPane>
+   </center>
+</BorderPane>

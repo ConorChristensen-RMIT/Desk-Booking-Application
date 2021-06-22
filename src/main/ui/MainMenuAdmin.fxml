@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.MainMenuAdminController">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#67ab67d0" height="94.0" layoutX="92.0" layoutY="200.0" onMouseReleased="#manageBookings" stroke="BLACK" strokeType="INSIDE" width="94.0" />
+                <Text fill="WHITE" layoutX="97.0" layoutY="235.0" onMouseReleased="#manageBookings" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.5" text="Manage Bookings" textAlignment="CENTER" wrappingWidth="83.33154296874994">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c9e320cd" height="94.0" layoutX="253.0" layoutY="200.0" onMouseReleased="#manageAccounts" stroke="BLACK" strokeType="INSIDE" width="94.0" />
+                <Text fill="WHITE" layoutX="253.0" layoutY="237.0" onMouseReleased="#manageAccounts" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.5" text="Manage Accounts" textAlignment="CENTER" wrappingWidth="92.4375">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#979797" height="94.0" layoutX="423.0" layoutY="200.0" onMouseReleased="#generateReports" stroke="BLACK" strokeType="INSIDE" width="94.0" />
+                <Text fill="WHITE" layoutX="423.0" layoutY="236.0" onMouseReleased="#generateReports" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.5" text="Generate Reports" textAlignment="CENTER" wrappingWidth="94.0">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Text>
+                <Text layoutX="107.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIMPLE DESK">
+                    <font>
+                        <Font name="Arial Bold" size="57.0" />
+                    </font>
+                </Text>
+                <Text fill="#757575" layoutX="253.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAIN MENU">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font></Text>
+                <Label fx:id="welcome_message" layoutX="26.0" layoutY="354.0" />
+            <Button layoutX="26.0" layoutY="320.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
