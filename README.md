@@ -49,7 +49,8 @@ Further screenshots on Admin managing bookings:
 ![images/img8.png](images/img8.png)
 
 
-#Use Instructions
+# User Instructions
+
 Administrator accounts must be Directly added to the database. Employee accounts can be made from the registration page. In
 this repository an SQLite database is used ans is populated with some upcoming and past bookings, and some user accounts. These
 can all be inspected using DB Browser. However, for evaluation, here are some Admin and Employee details so you can log in and demo 
@@ -57,7 +58,7 @@ the product.
 ![images/img9.png](images/img9.png)
 
 
-#Structure Details
+# Structure Details
 
 The application was written using Java 8, and the UI was developed using SceneBuilder for JavaFX. The project uses an MVC structure and 
 OOP design. The project contains examples of Class inheritance (ManageBookings emp/admin controllers and models), method overriding
@@ -72,10 +73,10 @@ and the catch block is used as a tool for application functionality. Exceptions 
 DuplicateIDException, DuplicateUsernameException, and EmployeeDoesNotExist. All these exceptions assist the application's functionality
 and the user experience.
 
-#Run details
+# Run details
 To run the application, the Main.java class in the top project folder can be run using the start() method. This will open the application window.
 
-#Bugs and refactoring
+# Bugs and refactoring
 To the developers knowledge the application works almost entirely as intended. There were complications in the late stages of deployment that
 found the application crashing whenever a booking was edited. The application would simply stop responding. Some fixes and refactoring found
 code innefficiencies that have since been fixed regarding how the tableView refreshes the column data. However, only on a rare occasion it seems, when 
